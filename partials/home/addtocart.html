@@ -1,0 +1,44 @@
+<ul class="smallppbox">
+    <li class="shopinformation clearfix">
+        <div  class="col-xs-9">
+            <div class="col-xs-3 plr0">
+
+                <a href="#/detail/{{product.id}}"> <img src={{product.imageUrl}} ></a>  </div>
+            <div class="col-xs-9">
+                <p > <a href="#/detail/d{{product.id}}"> {{product.name}}</a></p>
+                <h5 class="wxred">¥{{product.retailPrice}}</h5></div>
+        </div>
+        <div class="col-xs-3"><i class="fa fa-close fa-2x pull-right" ng-click="cancel()"></i></div>
+    </li>
+    <li class="pro-pnumber clearfix" style="display: block;">
+        <div class="col-xs-12" >
+            <dl class="choosesize"  ng-repeat="a in product.attributes">
+                <dt>{{a.name}}</dt>
+                <dd   ng-repeat="atv in  a.attributeValues "
+                      class="col-xs-3 col-sm-2"
+                      ng-class="{choose:atv.checked}"
+                      ng-click="atv.checked=!atv.checked"
+                      ng-model="atv" >
+                    {{atv.value}}
+                </dd>
+                <div  style="clear:both"></div>
+            </dl>
+        </div>
+    </li>
+    <li class="clearfix" ng-model="number">
+        <span class="col-xs-3 mt5">数量</span>
+        <div class=" mr15">
+            <button class="minus" ng-click="minus()">-</button>
+            <input  name="value" value="1" class="spinner"  ng-model="quantity">
+            <button class="add" ng-click="add()">+</button></div>
+
+    <li class="clearfix" >
+        <div class="col-xs-12">
+            <textarea  placeholder="留言"  ng-model="message"></textarea>
+        </div></li>
+    <li class="clearfix">
+        <div class="col-xs-12"> <a class="btn btn-wx col-xs-5"   ng-click="buynow(p)">立即购买</a>
+            <a  class="btn btn-default col-xs-5 pull-right" ng-click="addshopcart(p)">加入购物车</a>
+        </div>  </li>
+
+</ul>

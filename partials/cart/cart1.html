@@ -1,0 +1,46 @@
+
+<div class="page-cart1">
+  <div class="container-fluid">
+      <div class="row">
+      <header class="wx">
+          <a class="backlast pull-left" href="index.html"><i class="fa fa-chevron-left   "></i></a>
+        <span>购物车</span>
+      </header>
+
+   <ul class="cart-tabs clearfix"><li class="col-xs-3 active">
+       <a  href="javascript:void(0)">购物车</a></li><li  class="col-xs-3">    <a  href="javascript:void(0)">购物记录</a></li>
+       <li  class="col-xs-3">    <a  href="javascript:void(0)">我的红包</a></li> <li class="col-xs-3">    <a  href="javascript:void(0)">我的返现</a></li></ul>
+
+   <dl class="cart-list clearfix">
+       <dt> <a ng-click=""  class="pull-right">编辑</a></dt>
+       <dd class="shopinformation clearfix" ng-repeat="shopcartItem in shopcart">
+
+           <input type="checkbox" class="col-xs-1" ng-model="checked">
+
+               <div class="col-xs-2 plr0">
+                   <img  src="{{shopcartItem.imageUrl}}" > </div>
+
+               <div class="col-xs-9">
+                   <p class="col-xs-6">{{shopcartItem.productId}}</p>
+                   <h5 class="wxcolor col-xs-6 text-right">¥{{shopcartItem.retailPrice}}</h5>
+
+             <div class="pull-right">  <button class="minus ">-</button>
+               <input id="spinner" name="value" value="1" class="spinner">
+               <button class="add  ">+</button>
+                 </div>
+           </div>
+       </dd>
+
+   </dl>
+<div class="mb80"></div>
+          <div class="cart-footer clearfix col-xs-12">
+              <input type="checkbox" class="pull-left" ng-click="chooseAll()" ng-model="checked"/>全选
+              <span class="color-wx col-xs-offset-1">合计：9.9元</span> <a class="btn btn-default btn-wx pull-right"  href="#/settlement">结算</a> </div>
+      </div>
+<!--   <div class="cart-footer clearfix col-xs-12">
+       <input type="checkbox" class="pull-left" ng-click="chooseAll()"/>全选 <a class="btn btn-default btn-gray pull-right">删除</a> </div>
+</div>-->
+  </div>
+</div>
+</div>
+</div>

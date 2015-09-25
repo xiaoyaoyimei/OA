@@ -1,0 +1,56 @@
+<div class="page-homePage"   >
+    <div class="container-fluid">
+        <div class="search clearfix ">
+            <a class="col-xs-2 col-sm-1 logo" href="#/profile/1"><img src="images/icon/logo.png"></a>
+            <div class="search-ipt col-xs-9  col-sm-10"><i class="fa fa-search" ng-click="getProducts()"></i>
+                <input  placeholder="搜索商品"  ng-model= "query" >
+
+            </div>
+            <div class="current-address pull-right "><i class="fa fa-map-marker"></i></div>
+        </div>
+        <carousel interval="myInterval">
+            <slide ng-repeat="slide in slides" active="slide.active">
+                <img ng-src="{{slide.image}}" style="margin:auto;">
+                <div class="carousel-caption">
+                    <p>{{slide.text}}</p>
+                </div>
+            </slide>
+        </carousel>
+            <h6 class="hot">热卖单品<!--{{shopcartnumber}}--></h6>
+
+        <ul class="list-item" >
+
+            <li class="clearfix col-xs-6 col-sm-4 col-lg-3 "  ng-repeat="p in hotitems">
+                <div class="listitem-wrap clearfix"><div class="col-xs-4  col-sm-2 shop-img">
+                    <a href="#/detail/{{p.id}}">   <img src={{p.imageUrl}}></a></div>
+                    <div class="col-xs-8 list-pro-detail  col-sm-10">
+                        <p>  <a href="#/detail/{{p.id}}"> 	{{p.name}} </a></p>
+                        <span class="col-xs-12">销量{{p.sales}}件</span>
+                        <h6 class="col-xs-5">¥{{p.retailPrice}}</h6>
+                        <img src="images/icon/add.png"  class="pull-right" ng-click="addcart(p)"> </div>
+                </div>
+            </li>
+        </ul>
+        <div class="clear"></div>
+        <h6 class="hot">店长热推<!--{{shopcartnumber}}--></h6>
+
+        <ul class="list-item" >
+
+            <li class="clearfix col-xs-6 col-sm-4 col-lg-3 "  ng-repeat="p in hotitems">
+                <div class="listitem-wrap clearfix"><div class="col-xs-4  col-sm-2 shop-img">
+                    <a href="#/detail/{{p.id}}">   <img src={{p.imageUrl}}></a></div>
+                    <div class="col-xs-8 list-pro-detail  col-sm-10">
+                        <p>  <a href="#/detail/{{p.id}}"> 	{{p.name}} </a></p>
+                        <span class="col-xs-12">销量{{p.sales}}件</span>
+                        <h6 class="col-xs-5">¥{{p.retailPrice}}</h6>
+                        <img src="images/icon/add.png"  class="pull-right" ng-click="addcart(p)"> </div>
+                </div>
+            </li>
+        </ul>
+            <div class="clear mb80"></div>
+
+
+
+        </div>
+    </div>
+</div>

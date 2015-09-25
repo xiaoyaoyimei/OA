@@ -1,0 +1,45 @@
+<div class="page-classify">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="alert alert-danger" ng-show="errMsg">
+                <button type="button" class="close" ng-click="errMsg = null">&times;</button>
+                <strong>{{errMsg}}</strong>
+            </div>
+            <header class="search clearfix wx ">
+                <a href="#/profile/1" class="backlast pull-left"><i class="fa fa-chevron-left"></i></a>
+                <div class="search-ipt col-xs-10  col-sm-11"><i class="fa fa-search" ng-click="getProducts(1)"></i>
+                    <input placeholder="搜索商品" value="搜索商品" ng-model="query">
+                </div>
+            </header>
+            <div role="tabpanel" class="mainMenu">
+                <ul class="menulist col-xs-3" role="tablist"  ng-show="showcategory" >
+                    <li role="presentation"  ng-repeat="category in categories"
+                        ng-class="{active:category==selectedCategory}" ng-click="choose(category)"> {{category.name}}</li>
+                </ul>
+                <div class="tab-content " ng-class ="{'col-xs-9':showcategory,'col-xs-12':!showcategory}">
+                    <ul id="menu1" class="tab-pane active" role="tabpanel">
+                        <li class="itemMenu" ng-repeat="p in products"> <span>{{p.name}}</span>
+                            <h6 ><span>{{p.retailPrice}}</span>元</h6>
+                            <img src="images/icon/add.png"  class="pull-right" ng-click="addcart(p)">
+                            <div class="clear"></div>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            <footer>
+                <div class="footer clearfix  cart-number-footer">
+                    <div class="col-xs-2 cart-number"><i class="fa fa-shopping-cart"></i><span class="badge">{{ordernumber}}</span> </div>
+                    <hr/>
+                    <div class="col-xs-5 cart-price">
+                        <p>满35元起送</p>
+                        <span >¥{{ordertotalprice}}</span></div>
+                    <div class="col-xs-4 pull-right">
+                        <a class="btn  chosen" ng-click="placeorder(orderItem)">选好了</a> </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</div>
+</div>
+

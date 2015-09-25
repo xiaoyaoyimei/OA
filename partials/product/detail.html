@@ -1,0 +1,64 @@
+
+<div class="page-detail bg-gray">
+  <div class="container-fluid">
+    <div class="row"> <a class="ycomeback" href="#/profile/1"><i class=" fa fa-chevron-left "></i></a>
+        <carousel interval="myInterval">
+            <slide ng-repeat="slide in slides" active="slide.active">
+                <img ng-src="{{slide.image}}" style="margin:auto;">
+                <div class="carousel-caption">
+                    <p>{{slide.text}}</p>
+                </div>
+            </slide>
+        </carousel>
+      <div class="detail-describe mb80">
+        <p class="price col-xs-12  bg-white">价格:<em>¥{{product.retailPrice}}</em><span>销量:{{product.retailPrice}}</span></p>
+        <div class="detail-name clearfix  bg-white">
+          <div class="col-xs-8 pro-name">{{product.name}}</div>
+
+          <hr class="divider"/>
+          <div class="col-xs-3 share ">
+            <div ><i class="fa fa-mail-forward"></i><span>分享</span></div>
+          </div>
+        </div>
+        <ul class="argument clearfix ">
+          <li class=" clearfix  bg-white mb10 choose-bt" ng-click="chooseBt()" >
+            <span class="col-xs-10 col-sm-11">选择:冰,糖</span><i class="col-xs-2 col-sm-1 fa fa-chevron-right" ng-class="{'fa-chevron-down': choosebt}"></i> </li>
+          <li class="pro-pnumber clearfix" ng-show="choosebt">
+            <div class="col-xs-12">
+              <dl class="choosesize">
+                <dt>冰</dt>
+                <dd class="col-xs-3 col-sm-2">多冰</dd>
+                <dd class="col-xs-3 col-sm-2">少量</dd>
+                <dd class="col-xs-3 col-sm-2">无</dd>
+              </dl>
+              <div class="clear"></div>
+              <dl class="choosesize">
+                <dt>糖</dt>
+                <dd class="col-xs-3 col-sm-2">多糖</dd>
+                <dd class="col-xs-3 col-sm-2">少量</dd>
+                <dd class="col-xs-3 col-sm-2">无</dd>
+              </dl>
+               <div class="clear"></div>
+      <h5 >数量</h5>
+      <button class="minus ">-</button>
+      <input id="spinner" name="value" value="1" class="spinner">
+      <button class="add  ">+</button>
+      <div class="clear"></div>
+      <p class="mt10">库存:99件</p>
+            </div>
+            
+          </li>
+          <li class="clearfix  bg-white see-image">
+              <a  href="#/imgintro">
+                  <span class="col-xs-10 col-sm-11"><i class="fa fa-file-image-o"
+    ></i>图文详情</span> <i class="col-xs-2 col-sm-1 fa fa-chevron-right"></i></a></li>
+          <li class="clearfix  bg-white see-pnumber"><a class="col-xs-10 col-sm-11" href="#/offlinestore" ><i class="fa fa-file-text-o"></i>线下门店</a><i class="col-xs-2 col-sm-1 fa fa-chevron-right"></i> </li>
+          
+        </ul>
+      </div>
+     <div class="cart-footer col-xs-12"><a class="btn btn-buy-now col-xs-5"  ng-click="buynow(p)">立刻购买</a>
+         <a class="btn btn-add-to-cart col-xs-5 pull-right">加入购物车</a></div>
+    </div>
+  </div>
+  <a class="back-to-top"><i class="fa fa-chevron-up fa-2x"></i></a> </div>
+    </div>

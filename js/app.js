@@ -4,7 +4,7 @@ var app = angular.module("app", ["ngRoute", "ngAnimate", "ui.bootstrap",
 app.config(["$routeProvider",function($routeProvider) {
     $routeProvider.when("/", {
         redirectTo: "/home"
-    }).when("/home/:companyId", {
+    }).when("/home", {
         templateUrl: "partials/home/profile.html",
         controller: 'homeCtrl'
     }).when("/detail/:pid", {
@@ -19,6 +19,8 @@ app.config(["$routeProvider",function($routeProvider) {
     }).when("/me", {
         templateUrl: "partials/login/login.html",
         controller: "loginCtrl"
+    }).when("/message", {
+        templateUrl: "partials/message/message.html"
     }).when("/registered", {
         templateUrl: "partials/login/registered.html"
     }).when("/categories", {

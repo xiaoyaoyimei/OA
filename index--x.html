@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" > <!--<![endif]-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <link href="libs/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="libs/ionic/css/ionic.css" rel="stylesheet"/>
+    <link href="css/main.css" rel="stylesheet"/>
+    <link href="css/angular-carousel.css" rel="stylesheet"/>
+    <script type="text/javascript" src="libs/jquery/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="libs/jquery/jquery.slimscroll-1.3.3.min.js"></script>
+    <script type="text/javascript" src="libs/jquery/jquery-ui.js"></script>
+    <script type="text/javascript" src="libs/Chart.min.js"></script>
+    <script type="text/javascript" src="libs/angular-1.2.26.min.js"></script>
+    <script type="text/javascript" src="libs/angular-carousel.js"></script>
+    <script type="text/javascript" src="libs/angular-route-1.2.26.min.js"></script>
+    <script type="text/javascript" src="libs/angular-animate-1.2.26.min.js"></script>
+    <script type="text/javascript" src="libs/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="libs/angular-touch.min-1.2.26.js"></script>
+    <script type="text/javascript" src="libs/angular-ui-tree-2.1.5.min.js"></script>
+    <script type="text/javascript" src="libs/ui-bootstrap.min.js"></script>
+    <script type="text/javascript" src="libs/ui-bootstrap-tpls-0.12.0.min.js"></script>
+    <script type="text/javascript" src="libs/Chart.min.js"></script>
+    <script type="text/javascript" src="js/common/config.js"></script>
+    <script type="text/javascript" src="js/common/index.js"></script>
+    <script type="text/javascript" src="js/common/directives.js"></script>
+    <script type="text/javascript" src="js/product/app.product.js"></script>
+    <script type="text/javascript" src="js/product/services/productService.js"></script>
+    <script type="text/javascript" src="js/product/controllers/productCtrl.js"></script>
+    <script type="text/javascript" src="js/product/services/detailService.js"></script>
+    <script type="text/javascript" src="js/product/controllers/detailCtrl.js"></script>
+    <script type="text/javascript" src="js/product/services/attributeService.js"></script>
+    <script type="text/javascript" src="js/product/controllers/attributeCtrl.js"></script>
+    <script type="text/javascript" src="js/product/services/categoryService.js"></script>
+    <script type="text/javascript" src="js/product/controllers/unitCtrl.js"></script>
+    <script type="text/javascript" src="js/product/services/categoryService.js"></script>
+    <script type="text/javascript" src="js/product/services/unitService.js"></script>
+    <script type="text/javascript" src="js/cart/app.cart.js"></script>
+    <script type="text/javascript" src="js/cart/services/cartService.js"></script>
+    <script type="text/javascript" src="js/cart/controllers/cartCtrl.js"></script>
+    <script type="text/javascript" src="js/home/app.home.js"></script>
+    <script type="text/javascript" src="js/home/services/homeService.js"></script>
+    <script type="text/javascript" src="js/home/controllers/homeCtrl.js"></script>
+    <script type="text/javascript" src="js/login/app.login.js"></script>
+    <script type="text/javascript" src="js/login/services/loginService.js" charset="UTF-8" ></script>
+    <script type="text/javascript" src="js/login/controllers/loginCtrl.js"   charset="UTF-8" ></script>
+    <script type="text/javascript" src="js/app.js" charset="UTF-8" ></script>
+    <title>OA-FQ</title>
+</head>
+
+<body ng-app="app" id="app" custom-background off-canvas-nav ng-controller="appCtrl"   >
+<!--[if lt IE 9]>
+    <p class="browsehappy">您使用的浏览器太老了，建议您升级到360极速浏览器等最新的浏览器获得更好的用户体验</p>
+-->
+<div class="dark-bg">
+<div class="tabs tabs-dark tabs-icon-top">
+    <a class="tab-item" href="#/message">
+        <i class="icon ion-ios-email-outline"></i>信息
+    </a>
+    <a class="tab-item active"  href="#/apply">
+        <i class="icon ion-social-windows-outline"></i>应用
+    </a>
+    <a class="tab-item" href="#/telebook">
+        <i class="icon ion-ios-paper-outline"></i>通讯录
+    </a>
+    <a class="tab-item" href="#/me">
+        <i class="icon ion-ios-person-outline"></i>我
+    </a>
+</div>
+<div ng-view>
+
+</div>
+</div>
+
+</body>
+</html>
+</body>
+</html>

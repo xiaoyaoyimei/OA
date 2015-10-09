@@ -3,7 +3,7 @@ var app = angular.module("app", ["ngRoute", "ngAnimate", "ui.bootstrap",
 
 app.config(["$routeProvider",function($routeProvider) {
     $routeProvider.when("/", {
-        redirectTo: "/home"
+        redirectTo: "/message"
     }).when("/home", {
         templateUrl: "partials/home/profile.html",
         controller: 'homeCtrl'
@@ -19,6 +19,8 @@ app.config(["$routeProvider",function($routeProvider) {
     }).when("/me", {
         templateUrl: "partials/login/login.html",
         controller: "loginCtrl"
+    }).when("/addleave", {
+        templateUrl: "partials/apply/addleave.html",
     }).when("/message", {
         templateUrl: "partials/message/message.html"
     }).when("/registered", {
